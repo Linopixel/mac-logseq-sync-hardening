@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.logseq.sync</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/python3</string>
+        <string>/Users/<username>/logseq-code/cli-e2e/scripts/db_sync_server.py</string>
+        <string>start</string>
+        <string>--repo-root</string>
+        <string>/Users/<username>/logseq-code</string>
+        <string>--pid-file</string>
+        <string>/Users/<username>/logseq-server/server.pid</string>
+        <string>--log-file</string>
+        <string>/Users/<username>/logseq-server/server.log</string>
+        <string>--data-dir</string>
+        <string>/Users/<username>/logseq-server</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>JAVA_HOME</key>
+        <string>/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home</string>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin</string>
+    </dict>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+        <false/>
+    </dict>
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+    <key>StandardOutPath</key>
+    <string>/Users/<username>/logseq-server/launchd_stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/<username>/logseq-server/launchd_stderr.log</string>
+</dict>
+</plist>
